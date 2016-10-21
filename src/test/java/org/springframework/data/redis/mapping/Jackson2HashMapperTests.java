@@ -78,10 +78,7 @@ public class Jackson2HashMapperTests {
 		this.mapper = new Jackson2HashMapper(true);
 	}
 
-	/**
-	 * @see DATAREDIS-423
-	 */
-	@Test
+	@Test // DATAREDIS-423
 	public void shouldWriteReadHashCorrectly() {
 
 		Person jon = new Person("jon", "snow", 19);

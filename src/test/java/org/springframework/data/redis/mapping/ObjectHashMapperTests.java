@@ -33,18 +33,12 @@ public class ObjectHashMapperTests extends AbstractHashMapperTest {
 		return new ObjectHashMapper();
 	}
 
-	/**
-	 * @see DATAREDIS-503
-	 */
-	@Test
+	@Test // DATAREDIS-503
 	public void testSimpleType() {
 		assertBackAndForwardMapping(new Integer(100));
 	}
 
-	/**
-	 * @see DATAREDIS-503
-	 */
-	@Test
+	@Test // DATAREDIS-503
 	public void fromHashShouldCastToType() {
 
 		ObjectHashMapper objectHashMapper = new ObjectHashMapper();
@@ -55,10 +49,7 @@ public class ObjectHashMapperTests extends AbstractHashMapperTest {
 		assertThat(result, is(equalTo(new Integer(100))));
 	}
 
-	/**
-	 * @see DATAREDIS-503
-	 */
-	@Test(expected = ClassCastException.class)
+	@Test(expected = ClassCastException.class) // DATAREDIS-503
 	public void fromHashShouldFailIfTypeDoesNotMatch() {
 
 		ObjectHashMapper objectHashMapper = new ObjectHashMapper();

@@ -303,9 +303,7 @@ public abstract class AbstractRedisSetTests<T> extends AbstractRedisCollectionTe
 		assertEquals(0, result.size());
 	}
 
-	/**
-	 * @see DATAREDIS-314
-	 */
+	// DATAREDIS-314
 	@SuppressWarnings("unchecked")
 	@IfProfileValue(name = "redisVersion", value = "2.8+")
 	@Test
